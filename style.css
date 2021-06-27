@@ -1,0 +1,147 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+}
+.title{
+    text-align: center;
+    margin: 10px;
+    font-weight: bold;
+}
+.form{
+    margin: 10px;
+}
+#exprecion{
+    display: grid;
+    grid-template-areas: "input button";
+    grid-template-columns: 70vw 20vw;
+    grid-template-rows: 120px;
+    height: 120px;
+}
+.frm1{
+    grid-area: input;
+    display: grid;
+    grid-template-areas: "label"
+                         "text";
+    grid-template-columns: 1fr;
+    grid-template-rows: 30px 70px;
+}
+.frm1 label{
+    grid-area:label ;
+    display: block;
+    text-align: center;
+    text-align: left;
+}
+.frm1 textarea{
+    grid-area:text ;
+    height: 100px;
+    border-color: #2d065a4d;
+    outline-color: #2d065a;
+}
+.frm2{
+    grid-area: button;
+    align-self: center;
+}
+.frm2 button{
+    width: 70%;
+    background: #2d065a;
+    color: #ffffff;
+    margin:15px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    outline-color: #b4b4b4;
+}
+.resultado{
+    margin: 10px;
+}
+
+table{
+    border-spacing: 1;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    border: 2px solid #2d065a5b !important;
+}
+table thead tr{
+    height: 60px;
+    background: #000000;
+    color: #ffffff;
+    padding: 50px;
+}
+
+table * {
+    position: relative;
+  }
+  table td, table th {
+    padding-left: 8px;
+  }
+  
+  table thead tr {
+    height: 60px;
+    background: #36304a;
+  }
+  table tbody tr {
+    height: 50px;
+  }
+  table tbody tr:last-child {
+    border: 0;
+  }
+  table td, table th {
+    text-align: center;
+  }
+  table th{
+    font-family: OpenSans-Regular;
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.2;
+    font-weight: unset;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+  }
+  
+  tbody tr {
+    font-family: OpenSans-Regular;
+    font-size: 15px;
+    color: #808080;
+    line-height: 1.2;
+    font-weight: unset;
+  }
+  
+  tbody tr:hover {
+    color: #555555;
+    background-color: #f5f5f5;
+    cursor: pointer;
+  }
+/* .frm1{
+    grid-area: input;
+}
+.frm2{
+    grid-area: button;
+} */
+/* input{
+    width: 100%;
+    margin: 15px 20px;
+}
+button{
+    width: 100%;
+    background-color: #361244 ;
+    border-radius: 15px;
+    margin: 15px 20px;
+    padding: 10px;
+    color: #ffffff;
+} */
+/* #resultado{
+    background: #ffffff;
+    color: black;
+    width: 90vw;
+    height: 70vh;
+    margin: 15px 20px;
+    border: 2px solid #361244;
+} */

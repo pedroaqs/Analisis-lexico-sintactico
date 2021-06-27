@@ -1,0 +1,132 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  display: grid;
+  grid-template-areas: "form results";
+  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr;
+  margin: 10px;
+  overflow: hidden;
+}
+#form-box {
+  grid-area: form;
+}
+#title {
+  text-align: center;
+}
+#form-analisis {
+  margin: 10px;
+  justify-content: center;
+}
+#form-analisis textarea {
+  margin: 10px;
+  justify-content: center;
+  outline-color: #ffffff;
+}
+#form-analisis button {
+  padding: 15px;
+  color: #ffffff;
+  background: #000000;
+  border-radius: 10px;
+}
+label {
+  font-weight: bold;
+  margin: 10px;
+}
+textarea {
+  background: #272727;
+  color: #ffffff;
+  padding: 10px;
+}
+#btns {
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+  align-content: space-between;
+}
+#btns button {
+  margin: 20px;
+  outline: none;
+}
+#result {
+  margin: 10px;
+  grid-area: results;
+  display: grid;
+  grid-template-areas:
+    "tabs"
+    "pages";
+  grid-template-rows: 10vh 90vh;
+}
+.tabs li {
+  list-style: none;
+  display: inline;
+  margin: 15px 5px;
+}
+.tabs li a {
+  padding: 10px;
+  color: #ffffff;
+  background: #000000;
+  border-radius: 10px;
+}
+.tabs li a:hover {
+  color: #000000;
+  background: #ffffff;
+  border: 1px solid #000000;
+}
+.error {
+  color: #ff0000;
+}
+.tab-page {
+  height: 650px;
+  overflow-y: auto;
+  background-color: #272727;
+}
+#page1 {
+  color: #ffffff;
+}
+#header-page {
+  color: #2b913c;
+  background-color: #202020;
+  padding: 10px;
+}
+#consola {
+  margin: 10px;
+}
+table {
+  display: table;
+  border-collapse: collapse;
+  width: 100%;
+}
+thead {
+  width: 100%;
+  position: sticky;
+}
+tbody {
+  width: 100%;
+}
+thead tr {
+  color: #2b913c;
+  background-color: #202020;
+  font-weight: bold;
+}
+thead tr td {
+  text-align: center;
+  padding: 10px;
+}
+tbody tr {
+  color: #ffffff;
+  background-color: #272727;
+  text-align: center;
+}
+tbody tr td {
+  text-align: center;
+  padding: 10px;
+}
+#pi {
+  margin: 10px;
+  color: #ffffff;
+}

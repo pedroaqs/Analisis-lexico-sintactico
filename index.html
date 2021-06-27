@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analizador léxico y sintáctico</title>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'self' 'unsafe-inline';"
+    />
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <div id="form-box">
+      <div id="title">
+        <h1>Analizador léxico y sintáctico</h1>
+      </div>
+      <form action="" id="form-analisis">
+        <div>
+          <label for="fuente" style="display: block"
+            >Ingrese su expresión:
+          </label>
+          <textarea
+            id="fuente"
+            cols="60"
+            rows="35"
+            style="overflow-y: auto; resize: none"
+          ></textarea>
+        </div>
+        <div id="btns">
+          <button type="submit">Analizar</button>
+          <button
+            type="button"
+            id="clear"
+            style="background: #5c020a !important"
+          >
+            Limpiar código
+          </button>
+        </div>
+      </form>
+    </div>
+    <div id="result">
+      <div class="tabs">
+        <ul>
+          <li class="tab page1">
+            <a onclick="selectTab(event,'page1')">Consola</a>
+          </li>
+          <li class="tab page2">
+            <a onclick="selectTab(event,'page2')">Secuencia de Tokens</a>
+          </li>
+          <li class="tab page3">
+            <a onclick="selectTab(event,'page3')">Lexemas, patrones y tokens</a>
+          </li>
+          <li class="tab page4">
+            <a onclick="selectTab(event,'page4')">Tabla de símbolos</a>
+          </li>
+          <li class="tab page5">
+            <a onclick="selectTab(event,'page5')">Parse Izquierdo</a>
+          </li>
+        </ul>
+      </div>
+      <div class="pages">
+        <div class="tab-page" id="page1">
+          <div id="header-page"><h3>Consola</h3></div>
+          <div id="consola"></div>
+        </div>
+        <div class="tab-page" id="page2" style="display: none">
+          <div id="header-page"><h3>Secuencia de Tokens</h3></div>
+          <div id="st"></div>
+        </div>
+        <div class="tab-page" id="page3" style="display: none">
+          <div id="header-page"><h3>Lexemas, patrones y tokens</h3></div>
+          <div id="tcl"></div>
+        </div>
+        <div class="tab-page" id="page4" style="display: none">
+          <div id="header-page"><h3>Tabla de símbolos</h3></div>
+          <div id="ts"></div>
+        </div>
+        <div class="tab-page" id="page5" style="display: none">
+          <div id="header-page"><h3>Parse Izquierdo</h3></div>
+          <div id="pi"></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const tabs = document.querySelectorAll(".tab li");
+      const pages = document.querySelectorAll(".tab-page");
+      function selectTab(event, page) {
+        tabs.forEach((tab) => {
+          tab.className.replace("active", "");
+        });
+        pages.forEach((page) => {
+          page.style.display = "none";
+        });
+        document.getElementById(page).style.display = "block";
+        event.currentTarget.className += "active";
+      }
+    </script>
+  </body>
+</html>
